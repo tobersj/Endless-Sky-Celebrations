@@ -3,7 +3,7 @@ mission "christmas cheer"
 	invisible
 	repeat
 	to offer
-		"reputation: Santa" >= 3
+		"reputation: Santa" == 365
 	on offer
 		conversation
 			scene "scene/christmas"
