@@ -1,0 +1,2 @@
+name "Major Celebrations :)"
+about `A plug in that adds in major celebrations through the year :)`

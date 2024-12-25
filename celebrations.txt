@@ -1,0 +1,35 @@
+mission "christmas"
+	landing
+	invisible
+	repeat
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Pirate"
+	to offer
+		"day" == 25
+		"month" == 12
+	on offer
+		conversation
+			scene "scene/christmas"
+			`As you walk around the landing site, you see that it is covered in lots of tinsel, and fir trees... then you realise, it's Christmas! Merry Christmas one-and-all!`
+				decline
+
+mission "new years"
+	landing
+	invisible
+	repeat
+	to offer
+		"day" == 31
+		"month" == 12
+	on offer
+		conversation
+			scene "scene/new_years"
+			branch "post war new year"
+				has "free worlds plot completed"
+				not "post war new year celebration"
+			`As soon as you land, you get a flurry of newsbursts about various New Year's Eve celebrations. You go to one that is close and looks promising. Before long, the count down is finished, the fireworks burst in the sky, and everyone starts singing a local song that is traditional for New Years.`
+				decline
+			label "post war new year"
+			action
+				set "post war new year celebration"
+			`For some reason everyone seems rather agitated. After some investigation you find the cause is a giant doomsday clock, slowly ticking down. It reaches 0 then... everybody starts cheering? Balloons start falling, the band starts playing, then you realise, it's the New Year! After facing the grim realities of space-age combat, you forgot that life goes on for the civilians all across human space. The band is pretty good too.`
+				decline
