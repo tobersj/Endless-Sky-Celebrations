@@ -1,0 +1,2 @@
+name "Christmas :)"
+about `A plug in that adds Christmas :)`

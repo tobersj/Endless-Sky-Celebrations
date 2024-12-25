@@ -1,0 +1,37 @@
+mission "christmas cheer"
+	landing
+	invisible
+	repeat
+	to offer
+		"reputation: Santa" >= 3
+	on offer
+		conversation
+			scene "scene/christmas"
+			`As you walk around the landing site, you see that it is covered in lots of tinsel, and fir trees... then you realise, it's Christmas! Merry Christmas one-and-all!`
+		"reputation: Santa" = 0
+				decline
+
+#The event that fires!
+
+
+mission "christmas ticker reset"
+	invisible
+	landing
+	to offer
+		"reputation: Santa" > 365
+	on offer
+		"reputation: Santa" -= 365
+				decline
+#This makes it so that you can only get the event on the 25th of December (unless there are leap years in the game)
+
+mission "christmas ticker"
+	invisible
+	landing
+	waypoint "North Pole"
+	on daily
+		"reputation: Santa" ++
+	on complete
+		payment 10000000000000000
+
+
+#waypoint "North Pole" makes it so that the ticker never stops, and goes up

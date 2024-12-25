@@ -1,0 +1,24 @@
+government "Santa"
+	swizzle 1
+	"crew attack" ,5
+	"crew defense" .5
+	"player reputation" 1
+	"bribe" 0
+	"fine" 0
+
+system "North Pole"
+	pos 0 -1300
+	government Uninhabited
+	attributes
+	arrival 500
+	habitable 355
+	link "Rutilicus"
+	belt 1307
+	haze _menu/haze-67
+	asteroids "large metal" 1 2.1
+	asteroids "medium rock" 11 3.6
+	minables unknown 1 2.7
+	fleet Astral 50000
+	object
+		sprite star/f-dwarf
+		period 10
